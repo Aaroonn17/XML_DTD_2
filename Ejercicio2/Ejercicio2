@@ -1,0 +1,36 @@
+<!-- 
+Nombre: Aarón Lorente Cortés
+Curso: DAM 1
+Fecha: 02/04/2025
+Ejercicio: 2
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE EquiposNBA [
+    <!ELEMENT EquiposNBA (equipo+|nombre+)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT equipo (titulos, posicion, quinteto)>
+    <!ELEMENT titulos (#PCDATA)>
+    <!ELEMENT posicion (#PCDATA)>
+    <!ELEMENT quinteto (#PCDATA)>
+    <!ELEMENT conferencia (#PCDATA)>
+]>
+
+<EquiposNBA>
+    <equipo conferencia="este">
+        <titulos>3</titulos>
+        <posicion>4</posicion>
+        <quinteto>Jimmy Butler, Bam Adebayo, Tyler Herro, Kyle Lowry, Kevin Love</quinteto>
+        <conferencia>Este</conferencia>
+    </equipo>
+
+    <equipo conferencia="oeste">
+        <titulos>5</titulos>
+        <posicion>2</posicion>
+        <quinteto>Luka Dončić, Kyrie Irving, Tim Hardaway Jr., Grant Williams, Dereck Lively II</quinteto>
+        <conferencia>Oeste</conferencia>
+    </equipo>
+
+    <nombre>Miami Heat</nombre>
+    <nombre>Dallas Mavericks</nombre>
+</EquiposNBA>

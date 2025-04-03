@@ -1,0 +1,1 @@
+Primero abrimos el dtd de panel y colocamos los element que nos piden, dentro del element de aeropuerto se meten 7 elements más, que explican otras cualidades. Después añadimos el xml con los datos que se piden.

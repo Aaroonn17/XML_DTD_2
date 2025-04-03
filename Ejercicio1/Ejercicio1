@@ -1,0 +1,61 @@
+<!-- 
+Nombre: Aarón Lorente Cortés
+Curso: DAM 1
+Fecha: 02/04/2025
+Ejercicio: 1
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE factura [
+    <!ELEMENT factura (datos-emisor, datos-cliente, detallefactura)>
+    <!ELEMENT datos-emisor (nombre, cif, telefono)>
+    <!ELEMENT datos-cliente (nombre, cif, telefono)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT cif (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+
+    <!ELEMENT detallefactura (linea+)>
+    <!ELEMENT linea (descripcion, cantidad, pvp, oferta?)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT pvp (#PCDATA)>
+    <!ELEMENT oferta EMPTY>
+]>
+
+<factura numero="001" fecha="2025-04-03">
+    <!-- Datos del emisor -->
+    <datos-emisor>
+        <nombre>Librería El Buen Libro</nombre>
+        <cif>12345678A</cif>
+        <telefono>987654321</telefono>
+    </datos-emisor>
+
+    <!-- Datos del cliente -->
+    <datos-cliente>
+        <nombre>Biblioteca Municipal</nombre>
+        <cif>87654321B</cif>
+        <telefono>912345678</telefono>
+    </datos-cliente>
+
+    <!-- Detalle de la factura -->
+    <detallefactura>
+        <linea codigo-articulo="A001" tipo="Libro" importe="29.99">
+            <descripcion>Introducción a la Programación</descripcion>
+            <cantidad>2</cantidad>
+            <pvp>15.00</pvp>
+            <oferta/>
+        </linea>
+
+        <linea codigo-articulo="B001" tipo="DVD" importe="19.99">
+            <descripcion>Curso de Java</descripcion>
+            <cantidad>1</cantidad>
+            <pvp>19.99</pvp>
+        </linea>
+
+        <linea codigo-articulo="C001" tipo="Varios" importe="5.00">
+            <descripcion>Marcapáginas</descripcion>
+            <cantidad>3</cantidad>
+            <pvp>1.00</pvp>
+        </linea>
+    </detallefactura>
+</factura>
